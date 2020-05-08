@@ -34,6 +34,7 @@ def run():
     print("n_digits len: " + str(number_digits))
 
     print("\n")
+    input("Press Enter to continue...")
     print("### CREATING OUR SVC MODEL:")
     print("- We will use 'svm' from sklearn to make an SVC Model with the following parameters")
     print("- Parameters: svm.SVC(gamma=100, C=100, kernel='linear')");
@@ -47,6 +48,7 @@ def run():
     print("- Can we do even better?")
 
     print("\n")
+    input("Press Enter to continue...")
     print("### USING GRIDSEARCH TO FIND GOOD PARAMETERS FOR OUR MODEL:")
     print(" - We will use 'GridSearchCV' from sklearn.model_selection to accomplish this")
     print(" - We will use different key value pairs for possible parameters of Gamma and C to test out for our model")
@@ -76,6 +78,7 @@ def run():
 
 
     print("\n")
+    input("Press Enter to continue...")
     print("### RECREATE THE SVC MODEL WITH THE OPTIMAL PARAMETERS WE FOUND:")
     svc_model = svm.SVC(C=clf.best_estimator_.C, kernel=clf.best_estimator_.kernel, gamma=clf.best_estimator_.gamma)
     svc_model.fit(X_train, y_train)
@@ -94,6 +97,7 @@ def run():
 
 
     print("\n")
+    input("Press Enter to continue...")
     print("### EVALUATING OUR MODEL:")
     print("## CONFUSION MATRIX")
     print(" - We will use 'metrics' from sklearn to create a Confusion Matrix")
@@ -102,6 +106,7 @@ def run():
     # So far we can see that the model is incorect
     print(metrics.confusion_matrix(y_test, y_pred));
 
+    input("Press Enter to continue...")
     print("## CLASSIFICATION REPORT")
     print(" - We can also create a Classification Report from the 'metrics' module")
     # Print the classification report of `y_test` and `predicted`
@@ -109,6 +114,7 @@ def run():
     # By looking at these numbers we can see that using the KMeans model is not
     # a good fit for our problem. This means that we must pick a better model for our data
 
+    input("Press Enter to continue...")
     print("## OTHER STATISTICS")
     print('homo    compl   v-meas     ARI     AMI  silhouette')
     print('%.3f   %.3f   %.3f   %.3f   %.3f    %.3f'
@@ -120,7 +126,8 @@ def run():
              silhouette_score(X_test, y_pred, metric='euclidean')))
 
 
-
+    print("\n")
+    input("Press Enter to continue...")
     print("### CREATING AN IMAGE WITH SAMPLE PREDICTED VALUES AND THEIR IMAGES:")
     print("- We will be using MatPlotLib")
     print("- Look for the output to see the displayed figure")
@@ -143,6 +150,7 @@ def run():
 
 
     print("\n")
+    input("Press Enter to continue...")
     print("### VISUALIZING USING PCA:")
     print("- Basic dimensionality reduction method")
     # Reduce the dimensions to visualize using PCA
@@ -174,6 +182,7 @@ def run():
 
 
     print("\n")
+    input("Press Enter to continue...")
     print("### VISUALIZING USING Isomap:")
     print("- Better dimensionality reduction method")
     # Reduce the dimensions to visualize using Isomap from SciKitLearn

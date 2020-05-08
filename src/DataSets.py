@@ -28,6 +28,7 @@ def run():
     digits_target = digits.target
     digits_images = digits.images
     print("\n")
+    input("Press Enter to continue...")
     print("### 'DATA':")
     print("- digits_data shape: " + str(digits_data.shape))
     print("- digits_data at index " + str(example_index) +":")
@@ -36,6 +37,7 @@ def run():
 
 
     print("\n")
+    input("Press Enter to continue...")
     print("### 'TARGET':")
     print("- digits_target shape: " + str(digits_target.shape))
     print("- digits_target at index " + str(example_index) +":")
@@ -44,6 +46,7 @@ def run():
     print("=> The correct answer to the entry is " + str(digits_target[example_index]))
 
     print("\n")
+    input("Press Enter to continue...")
     print("### 'IMAGES':")
     print("- digits_images shape: " + str(digits_images.shape))
     print("- digits_images at index " + str(example_index) + ":")
@@ -52,6 +55,7 @@ def run():
     print("=> Notice the shape of the digit represented above")
 
     print("\n")
+    input("Press Enter to continue...")
     print("### PROPERTIES OF THE DATASET:")
     # if we get the array of unique elements from digits.target
     # we have an array of the 10 numbers in the data set

@@ -29,6 +29,7 @@ def run():
     plt.show()
 
     print("\n")
+    input("Press Enter to continue...")
     print("### MatPlotLib Plots Ex.2:")
     print("- We will be binding digits.images to digits.target to display the first 8 entries")
     print("- Look for the output to see the displayed figure")
@@ -51,5 +52,5 @@ def run():
     print("\n")
     print("### END OF SECTION")
     print("/////////////////////////////////////////////////////////////////////////////////")
-    raw_input("Press Enter to continue...")
+    print("\n")
     PCAPlottingExample.run()

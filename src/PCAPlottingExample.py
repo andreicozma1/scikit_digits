@@ -14,6 +14,7 @@ def run():
 
     # Visualization - PCA (two components to have two dimensional data to plot)
     print("\n")
+    input("Press Enter to continue...")
     print("### CREATING THE PCA:")
     pca = PCA(n_components=2)
     print("- This is the 'pca' object printed out:")
@@ -24,6 +25,7 @@ def run():
     print(reduced_data_pca)
 
     print("\n")
+    input("Press Enter to continue...")
     print("### CREATING THE SCATTER PLOT WITH MatPlotLib:")
     print("- Knowing the number of total unique digits in our digits.target, we should have the same number differently colored clusters on our scatterplot")
     print("- Look for the output to see the displayed figure")

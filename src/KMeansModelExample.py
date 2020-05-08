@@ -17,6 +17,10 @@ def run():
     print("### KMEANS MODEL EXAMPLE")
     print("################################################################################")
 
+
+    print("### INTRODUCTION:")
+    print("- First, we use train_test_split to split our data into training and testing sets as described in the TrainTestSplitting tutorial")
+    print("- We will be using two variables TEST_SIZE set to " + str(TEST_SIZE) + " and RANDOM_STATE set to " + str(RANDOM_STATE))
     # Create the Kmeans model
     # 10 digits for 10 clusters.
     # Use the same random_state variable as used before
@@ -26,11 +30,9 @@ def run():
                                                                                    digits.images, test_size=TEST_SIZE,
                                                                                    random_state=RANDOM_STATE)
 
-    print("### INTRODUCTION:")
-    print("- First, we use train_test_split to split our data into training and testing sets as described in the TrainTestSplitting tutorial")
-    print("- We will be using two variables TEST_SIZE set to " + str(TEST_SIZE) + " and RANDOM_STATE set to " + str(RANDOM_STATE))
 
     print("\n")
+    input("Press Enter to continue...")
     print("### LOOKING AT OUR TRAINING DATA:")
     print("- We want to make sure that we are training our data on all the digits in the whole data set")
     unique_digits = np.unique(y_train)
@@ -39,6 +41,7 @@ def run():
     print("- n_digits len: " + str(number_digits))
 
     print("\n")
+    input("Press Enter to continue...")
     print("### CREATING OUR KMEANS MODEL:")
     print("- We will use 'cluster' from sklearn to make a KMeans object with the following parameters")
     print("- Parameters: cluster.KMeans(init=\"k-means++\", n_clusters=number_digits, random_state=RANDOM_STATE)");
@@ -48,6 +51,7 @@ def run():
     # fit the training data to the model
 
     print("\n")
+    input("Press Enter to continue...")
     print("### TRAINING OUR MODEL")
     clf.fit(X_train)
     print("- Looking at our clusters:")
@@ -56,6 +60,7 @@ def run():
     print("- Meaning: We have 10 cluster centers, each with 64 features coming from our pixel values")
 
     print("\n")
+    input("Press Enter to continue...")
     print("### VISUALIZING OUR CLUSTER CENTERS:")
     print(" - We will use MatPlotLib to output the images for each of our cluster centers")
     print(" - Look for the output to see the displayed figure")
@@ -76,6 +81,7 @@ def run():
     plt.show()
 
     print("\n")
+    input("Press Enter to continue...")
     print("### PREDICTING OUR TEST DATA:")
     print(" - Use the .predict function on the KMeans model to predict our X_test.")
     print(" - Ideally, these numbers should match our Y_test if the model is accurate")
@@ -88,6 +94,7 @@ def run():
     print(" - As you can see, the KMeans model is not very accurate")
 
     print("\n")
+    input("Press Enter to continue...")
     print("### EVALUATING OUR MODEL:")
     print("## CONFUSION MATRIX")
     print(" - We will use 'metrics' from sklearn to create a Confusion Matrix")
@@ -96,7 +103,7 @@ def run():
     # So far we can see that the model is incorect
     print(metrics.confusion_matrix(y_test, y_pred));
 
-
+    input("Press Enter to continue...")
     print("## CLASSIFICATION REPORT")
     print(" - We can also create a Classification Report from the 'metrics' module")
     # Print the classification report of `y_test` and `predicted`
@@ -104,6 +111,7 @@ def run():
     # By looking at these numbers we can see that using the KMeans model is not
     # a good fit for our problem. This means that we must pick a better model for our data
 
+    input("Press Enter to continue...")
     print("## OTHER STATISTICS")
     print('% 9s' % 'inertia    homo   compl  v-meas     ARI AMI  silhouette')
     print('%i   %.3f   %.3f   %.3f   %.3f   %.3f    %.3f'
@@ -118,6 +126,7 @@ def run():
 
 
     print("\n")
+    input("Press Enter to continue...")
     print("### VISUALIZING USING PCA:")
     print("- Basic dimensionality reduction method")
     # Reduce the dimensions to visualize using PCA
@@ -149,6 +158,7 @@ def run():
 
 
     print("\n")
+    input("Press Enter to continue...")
     print("### VISUALIZING USING Isomap:")
     print("- Better dimensionality reduction method")
     # Reduce the dimensions to visualize using Isomap from SciKitLearn

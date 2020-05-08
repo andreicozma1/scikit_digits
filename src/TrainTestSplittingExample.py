@@ -11,12 +11,6 @@ def run():
     print("### SPLITTING THE DATA INTO TRAINING AND TESTING SETS")
     print("################################################################################")
 
-    # Splitting the data into training and testing sets
-    # to visualize y = mx + b with y being the answer
-    # in this case, the y_train is the set containing the target value of the corresponding data
-    X_train, X_test, y_train, y_test, images_train, images_test = train_test_split(digits.data, digits.target,
-                                                                                   digits.images, test_size=TEST_SIZE,
-                                                                                   random_state=RANDOM_STATE)
 
     print("### INTRODUCTION:")
     print("- We will be using 'train_test_split' from 'sklearn.model_selection' to split our data")
@@ -24,8 +18,15 @@ def run():
     print("- We will be using two variables TEST_SIZE set to " + str(TEST_SIZE) + " and RANDOM_STATE set to " + str(RANDOM_STATE))
     print("- This will give us " + str(TEST_SIZE * 100) + "% test data and " + str(100 - TEST_SIZE * 100) + "% training data for our model")
     print("- The RANDOM_STATE is simply a seed used for randomly splitting our data")
+    # Splitting the data into training and testing sets
+    # to visualize y = mx + b with y being the answer
+    # in this case, the y_train is the set containing the target value of the corresponding data
+    X_train, X_test, y_train, y_test, images_train, images_test = train_test_split(digits.data, digits.target,
+                                                                                   digits.images, test_size=TEST_SIZE,
+                                                                                   random_state=RANDOM_STATE)
 
     print("\n")
+    input("Press Enter to continue...")
     print("### PROPERTIES OF OUR SPLIT DATA:")
     n_samples, n_features = X_train.shape
     # 3/4ths of the data is used to train
@@ -44,6 +45,7 @@ def run():
 
 
     print("\n")
+    input("Press Enter to continue...")
     print("### LOOKING AT OUR TRAINING DATA")
     print("- We want to make sure that we are training our data on all the digits in the whole data set")
     unique_digits = np.unique(y_train)
